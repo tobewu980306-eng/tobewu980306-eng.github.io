@@ -3,30 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tobe Wu | Full Stack & Cloud Developer</title>
-  <meta name="description" content="Personal portfolio and showcase of Tobe Wu - Full Stack Engineer, Cloud Developer & AI Enthusiast.">
+  <title>Chef Tobe Wu | 旬味當代料理主廚 · 食材風土誌</title>
+  <meta name="description" content="Chef Tobe Wu 的個人私廚與旬味料理網站。堅持產地到餐桌、天然發酵與頂級風土食材探索，提供私廚晚宴與客製化美饌體驗。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Serif+TC:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Ambient Background Glow Effects -->
-  <div class="glow-bg glow-1"></div>
-  <div class="glow-bg glow-2"></div>
+  <!-- Ambient Warm Culinary Glow Effects -->
+  <div class="glow-bg glow-amber"></div>
+  <div class="glow-bg glow-herb"></div>
 
   <!-- Header / Navigation -->
   <header class="navbar">
     <div class="nav-container">
       <a href="#hero" class="nav-logo">
-        <span class="logo-bracket">&lt;</span>Tobe<span class="logo-accent">.Dev</span><span class="logo-bracket">/&gt;</span>
+        <span class="logo-leaf">🌿</span> Chef <span class="logo-accent">Tobe Wu</span>
       </a>
       <nav class="nav-links">
-        <a href="#about">關於我</a>
-        <a href="#skills">技術堆疊</a>
-        <a href="#projects">精選專案</a>
-        <a href="#experience">經歷</a>
-        <a href="#contact" class="btn-nav">聯絡我</a>
+        <a href="#about">主廚理念</a>
+        <a href="#ingredients">風土嚴選</a>
+        <a href="#menu">旬味菜單</a>
+        <a href="#journey">廚藝歷程</a>
+        <a href="#reservation" class="btn-nav">盛宴預約</a>
       </nav>
       <button class="mobile-toggle" aria-label="切換選單" id="menuToggle">
         <span></span>
@@ -41,252 +41,261 @@
     <section id="hero" class="section hero-section">
       <div class="container hero-content">
         <div class="badge-status">
-          <span class="pulse-dot"></span>
-          <span>積極探索新技術與合作機會</span>
+          <span class="spice-dot">🌶️</span>
+          <span>冬旬・當季私廚客製菜單開放預約中</span>
         </div>
         <h1 class="hero-title">
-          你好，我是 <span class="gradient-text">Tobe Wu</span>
-          <br>全端架構與雲端開發者
+          以<span class="gradient-text">旬之味</span>，淬鍊風土之美
         </h1>
+        <p class="hero-subheading">
+          法義現代融合料理主廚 · 產地食材探索家
+        </p>
         <p class="hero-desc">
-          專注於建構高效能分散式系統、現代化 Web 應用程式與 AI 自動化解決方案。熱愛開源生態系與極致的使用者體驗。
+          「每一道端上餐桌的菜餚，都是風、土壤與農人晨露的結晶。」從高山野菇到深海野味，結合天然熟成、慢火煙燻與當代分子廚藝，為您呈現難忘的感官饗宴。
         </p>
         <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary">探索精選專案</a>
-          <a href="https://github.com/tobewu980306-eng" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-            <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-            </svg>
-            GitHub 個人主頁
-          </a>
+          <a href="#menu" class="btn btn-primary">品味招牌旬饌</a>
+          <a href="#reservation" class="btn btn-secondary">預約專屬私廚</a>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Chef Section -->
     <section id="about" class="section about-section">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">ABOUT ME</span>
-          <h2 class="section-title">關於我與技術理念</h2>
+          <span class="section-tag">CULINARY PHILOSOPHY</span>
+          <h2 class="section-title">產地到餐桌的料理哲學</h2>
         </div>
         <div class="about-grid">
           <div class="about-card">
-            <h3>技術理念</h3>
+            <div class="card-icon">🌾</div>
+            <h3>敬畏自然，尊榮食材</h3>
             <p>
-              我相信簡潔、具擴展性且可維護的程式碼是創造長久價值的基石。從前端細緻的互動動畫，到後端高併發的微服務架構，我持續追求以工程師思維解決實際業務難題。
+              每一片蒔蘿、每一顆黑蒜都有其成熟的最佳節奏。我走訪台灣各地有機契作小農與當日現撈漁港，捨棄繁複的人工化合物，透過炭烤柴燒、乳酸發酵與澄清手法，引出天然食材深處最純粹的鮮甜（Umami）。
             </p>
             <div class="stats-row">
               <div class="stat-item">
-                <span class="stat-number">5+</span>
-                <span class="stat-label">年程式開發經驗</span>
+                <span class="stat-number">10+</span>
+                <span class="stat-label">年米其林體系研發歷練</span>
               </div>
               <div class="stat-item">
-                <span class="stat-number">20+</span>
-                <span class="stat-label">完成專案與服務</span>
+                <span class="stat-number">100%</span>
+                <span class="stat-label">友善契作與永續漁法</span>
               </div>
               <div class="stat-item">
-                <span class="stat-number">99.9%</span>
-                <span class="stat-label">系統可用性指標</span>
+                <span class="stat-number">60+</span>
+                <span class="stat-label">原創季節靈感菜色</span>
               </div>
             </div>
           </div>
           <div class="about-card highlight">
-            <h3>核心專長領域</h3>
+            <div class="card-icon">🔥</div>
+            <h3>四大核心廚藝支柱</h3>
             <ul class="feature-list">
-              <li>⚡ <strong>全端 Web 應用架構</strong>：現代 React / Next.js 與 Vue 生態</li>
-              <li>🚀 <strong>高效能後端 API</strong>：Node.js、Python FastAPI、Go 微服務</li>
-              <li>☁️ <strong>雲端部署與 CI/CD</strong>：Docker、Kubernetes、GitHub Actions</li>
-              <li>🤖 <strong>AI 智慧代理整合</strong>：LLM 應用、Agentic Workflow、客製化 MCP 工具</li>
+              <li>🥩 <strong>乾式熟成工藝 (Dry Aging)</strong>：精準控溫控濕，濃縮野禽與頂級牛肉的榛果香氣。</li>
+              <li>🌿 <strong>野採香草與天然發酵</strong>：運用金桔、康普茶與米麴，構築層次豐富的清雅酸韻。</li>
+              <li>🔥 <strong>龍眼木柴燒炭烤 (Wood Fired)</strong>：以明火煙燻賦予食材靈魂深度的香氣。</li>
+              <li>🍷 <strong>當代餐酒配搭 (Terroir Pairing)</strong>：精選自然酒 (Natural Wine) 與台灣冷萃高山茶。</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section skills-section">
+    <!-- Ingredients & Terroir Section -->
+    <section id="ingredients" class="section ingredients-section">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">TECH STACK</span>
-          <h2 class="section-title">專業技術堆疊</h2>
+          <span class="section-tag">TERROIR & INGREDIENTS</span>
+          <h2 class="section-title">尋訪嚴選・風土食材庫</h2>
+          <p class="section-subtitle">我們堅信頂級的料理，從泥土深處與海風吹拂的源頭便已決定</p>
         </div>
-        <div class="skills-grid">
-          <div class="skill-group">
-            <h3>Frontend Development</h3>
-            <div class="tags">
-              <span class="tag">TypeScript</span>
-              <span class="tag">React</span>
-              <span class="tag">Next.js</span>
-              <span class="tag">TailwindCSS</span>
-              <span class="tag">HTML5 / CSS3</span>
+        <div class="ingredients-grid">
+          <div class="ingredient-card">
+            <div class="ingredient-badge">山林採集</div>
+            <div class="ingredient-emoji">🍄</div>
+            <h3>南投野生牛肝菌與黑松露</h3>
+            <p>清晨於濕潤森林採集，散發深邃濃郁的泥土香氣與堅果後韻，賦予高湯豐沛厚度。</p>
+            <div class="ingredient-tags">
+              <span class="tag">#低溫脫水</span>
+              <span class="tag">#慢熬澄清</span>
             </div>
           </div>
-          <div class="skill-group">
-            <h3>Backend & API</h3>
-            <div class="tags">
-              <span class="tag">Node.js</span>
-              <span class="tag">Express</span>
-              <span class="tag">Python</span>
-              <span class="tag">FastAPI</span>
-              <span class="tag">RESTful & GraphQL</span>
+          <div class="ingredient-card">
+            <div class="ingredient-badge">海洋旬味</div>
+            <div class="ingredient-emoji">🐟</div>
+            <h3>宜蘭野生紅甘與白旗魚</h3>
+            <p>友善一本釣漁法捕撈，經主廚 7 日冰溫真空熟成，魚肉質地綿密、脂香四溢。</p>
+            <div class="ingredient-tags">
+              <span class="tag">#冰溫熟成</span>
+              <span class="tag">#昆布漬</span>
             </div>
           </div>
-          <div class="skill-group">
-            <h3>Databases & Storage</h3>
-            <div class="tags">
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">MySQL</span>
-              <span class="tag">Redis</span>
-              <span class="tag">Prisma ORM</span>
-              <span class="tag">MongoDB</span>
+          <div class="ingredient-card">
+            <div class="ingredient-badge">大地農園</div>
+            <div class="ingredient-emoji">🧄</div>
+            <h3>雲林熟成黑蒜與黑刺蔥</h3>
+            <p>經過 60 天恆溫低溫發酵，酸甜黑蒜如蜜餞般醇厚，搭配在地野生香料刺蔥提味。</p>
+            <div class="ingredient-tags">
+              <span class="tag">#天然發酵</span>
+              <span class="tag">#黑蒜油</span>
             </div>
           </div>
-          <div class="skill-group">
-            <h3>DevOps & Cloud</h3>
-            <div class="tags">
-              <span class="tag">Docker</span>
-              <span class="tag">GitHub Actions</span>
-              <span class="tag">AWS / GCP</span>
-              <span class="tag">Linux</span>
-              <span class="tag">Nginx</span>
+          <div class="ingredient-card">
+            <div class="ingredient-badge">頂級牧場</div>
+            <div class="ingredient-emoji">🦆</div>
+            <h3>花蓮放牧櫻桃鴨胸</h3>
+            <p>天然穀物與湧泉放養，皮脆肉嫩，經過龍眼木炭火慢焙後外酥內潤、玫瑰透紅。</p>
+            <div class="ingredient-tags">
+              <span class="tag">#炭火炙燒</span>
+              <span class="tag">#乾式熟成</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section projects-section">
+    <!-- Signature Menu Section -->
+    <section id="menu" class="section menu-section">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">PORTFOLIO</span>
-          <h2 class="section-title">精選專案展示</h2>
+          <span class="section-tag">SIGNATURE TASTING MENU</span>
+          <h2 class="section-title">主廚精選・旬味美饌</h2>
+          <p class="section-subtitle">每季更換的客製私廚菜單，帶領味蕾探索土地的感官故事</p>
         </div>
-        <div class="projects-grid">
-          <!-- Project 1 -->
-          <div class="project-card">
-            <div class="project-banner project-banner-1">
-              <span class="project-badge">AI & Automation</span>
+        <div class="menu-grid">
+          <!-- Dish 1 -->
+          <div class="menu-card">
+            <div class="dish-header">
+              <span class="dish-course">主菜 · SIGNATURE MAIN</span>
+              <span class="dish-time">熟成 14 天</span>
             </div>
-            <div class="project-body">
-              <h3 class="project-title">AgentFlow - 智慧自動化工作流引擎</h3>
-              <p class="project-desc">
-                以 LLM 與多代理人協作為核心的任務調度平台，支援外掛整合、即時串流通訊與自動化程式碼生成。
-              </p>
-              <div class="project-tags">
-                <span class="pill">TypeScript</span>
-                <span class="pill">Next.js</span>
-                <span class="pill">FastAPI</span>
-                <span class="pill">Redis</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/tobewu980306-eng" target="_blank" rel="noopener noreferrer" class="link-btn">原始碼 ↗</a>
-              </div>
+            <h3 class="dish-title">熟成櫻桃鴨胸佐黑蒜波特酒醬</h3>
+            <p class="dish-desc">
+              嚴選花蓮櫻桃鴨胸經 14 日風乾熟成，外皮以龍眼木炭火炙烤至金黃酥脆，佐以低溫熟成黑蒜波特酒濃縮醬汁與焦化香蔥泥。
+            </p>
+            <div class="dish-ingredients">
+              <span>🌿 烤小韭蔥</span>
+              <span>🧄 60天黑蒜醬</span>
+              <span>🍇 波特紅酒</span>
+              <span>🌱 迷迭香油</span>
             </div>
           </div>
 
-          <!-- Project 2 -->
-          <div class="project-card">
-            <div class="project-banner project-banner-2">
-              <span class="project-badge">Cloud Infrastructure</span>
+          <!-- Dish 2 -->
+          <div class="menu-card">
+            <div class="dish-header">
+              <span class="dish-course">前菜 · RAW & CHARRED</span>
+              <span class="dish-time">當季旬鮮</span>
             </div>
-            <div class="project-body">
-              <h3 class="project-title">CloudPulse - 分散式服務監控儀表板</h3>
-              <p class="project-desc">
-                針對微服務集群設計的高效即時指標監控中心，整合 Prometheus 指標查詢與自定義警報通知機器人。
-              </p>
-              <div class="project-tags">
-                <span class="pill">Go</span>
-                <span class="pill">React</span>
-                <span class="pill">Docker</span>
-                <span class="pill">WebSocket</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/tobewu980306-eng" target="_blank" rel="noopener noreferrer" class="link-btn">原始碼 ↗</a>
-              </div>
+            <h3 class="dish-title">炭炙野生紅甘佐金桔發酵胡蘿蔔泥</h3>
+            <p class="dish-desc">
+              宜蘭野生紅甘以稻草瞬火微炙，表面輕染燻香，內裡滑嫩鮮甜；搭配客家金桔乳酸發酵泥與手指檸檬顆粒，酸香在口中迸發。
+            </p>
+            <div class="dish-ingredients">
+              <span>🌾 稻草煙燻</span>
+              <span>🍊 金桔發酵泥</span>
+              <span>🍋 手指檸檬</span>
+              <span>🌿 紫蘇嫩芽</span>
             </div>
           </div>
 
-          <!-- Project 3 -->
-          <div class="project-card">
-            <div class="project-banner project-banner-3">
-              <span class="project-badge">Developer Tool</span>
+          <!-- Dish 3 -->
+          <div class="menu-card">
+            <div class="dish-header">
+              <span class="dish-course">湯品 · SOUP & PASTA</span>
+              <span class="dish-time">慢熬 8 小時</span>
             </div>
-            <div class="project-body">
-              <h3 class="project-title">DevKit CLI - 開發者工程自動化套件</h3>
-              <p class="project-desc">
-                統一團隊開發規範與環境佈署的 CLI 工具，支援一鍵建立微服務骨架、資安金鑰掃描與 CI/CD 腳本注入。
-              </p>
-              <div class="project-tags">
-                <span class="pill">Node.js</span>
-                <span class="pill">GitHub API</span>
-                <span class="pill">Shell</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/tobewu980306-eng" target="_blank" rel="noopener noreferrer" class="link-btn">原始碼 ↗</a>
-              </div>
+            <h3 class="dish-title">黑松露野菇澄清湯佐手作牛肝菌雲吞</h3>
+            <p class="dish-desc">
+              以老母雞與五種山林乾燥菌菇文火慢熬、雙重蛋白澄清，湯色琥珀剔透；手工揉製義大利雲吞內餡填滿榛果牛肝菌與佩克里諾乳酪。
+            </p>
+            <div class="dish-ingredients">
+              <span>🍄 義大利黑松露</span>
+              <span>🥟 手工雲吞</span>
+              <span>🧀 佩克里諾乳酪</span>
+              <span>🥣 琥珀澄清湯</span>
+            </div>
+          </div>
+
+          <!-- Dish 4 -->
+          <div class="menu-card">
+            <div class="dish-header">
+              <span class="dish-course">甜點 · DESSERT FINALE</span>
+              <span class="dish-time">冬旬特調</span>
+            </div>
+            <h3 class="dish-title">紅玉紅茶煙燻巧克力慕斯佐香草油</h3>
+            <p class="dish-desc">
+              72% 苦甜法芙娜生巧克力慕斯注入日月潭十八號紅玉紅茶香氣，底層鋪上肉桂海鹽脆酥，滴淋現萃低溫蒔蘿香草橄欖油。
+            </p>
+            <div class="dish-ingredients">
+              <span>🍫 72% 法芙娜</span>
+              <span>🍵 紅玉紅茶煙燻</span>
+              <span>🌿 蒔蘿香草油</span>
+              <span>🧂 鹽之花脆酥</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Experience Timeline -->
-    <section id="experience" class="section experience-section">
+    <!-- Culinary Journey Section -->
+    <section id="journey" class="section journey-section">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">CAREER</span>
-          <h2 class="section-title">歷程與里程碑</h2>
+          <span class="section-tag">CHEF'S JOURNEY</span>
+          <h2 class="section-title">廚藝探索年誌</h2>
         </div>
         <div class="timeline">
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <span class="timeline-date">2024 - 現在</span>
-              <h3 class="timeline-title">資深全端工程師 · 創新技術研發</h3>
-              <p class="timeline-desc">負責核心產品架構升級、多雲佈署架構與 AI Agent 自動化流程導入，大幅提升團隊研發效率。</p>
+              <span class="timeline-date">2024 - 至今</span>
+              <h3 class="timeline-title">創立「旬・Tobe Atelier」私廚工作室 & 餐飲研發顧問</h3>
+              <p class="timeline-desc">專注於 VIP 頂級客製化私廚晚宴、跨界餐酒會設計，以及在地小農食材產銷履歷聯名推廣。</p>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <span class="timeline-date">2022 - 2024</span>
-              <h3 class="timeline-title">後端與雲端架構師 · 企業軟體解決方案</h3>
-              <p class="timeline-desc">主導微服務重構、設計高併發 REST API 與建置 CI/CD 自動化測試管道。</p>
+              <span class="timeline-date">2021 - 2024</span>
+              <h3 class="timeline-title">米其林當代歐陸餐廳 · 研發副主廚 (Sous Chef)</h3>
+              <p class="timeline-desc">主導季節菜單研發、乾式熟成室規劃與自然發酵醬汁配方設計，帶領團隊連續獲得星級殊榮。</p>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <span class="timeline-date">2018 - 2022</span>
-              <h3 class="timeline-title">資訊工程學士學位</h3>
-              <p class="timeline-desc">主修電腦科學、演算法與軟體工程，熱衷參與開源社群專案與黑客松競賽。</p>
+              <span class="timeline-date">2017 - 2021</span>
+              <h3 class="timeline-title">國際廚藝學院高級文憑 · 歐陸三星名廚研修</h3>
+              <p class="timeline-desc">鑽研法式正統古典料理技藝、醬汁體系 (Sauce-making) 與現代低溫烹調科學。</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
+    <!-- Reservation & Contact Section -->
+    <section id="reservation" class="section reservation-section">
       <div class="container contact-container">
         <div class="section-header">
-          <span class="section-tag">GET IN TOUCH</span>
-          <h2 class="section-title">讓我們一起打造卓越的產品</h2>
-          <p class="contact-sub">無論是技術交流、專案合作或新機會探詢，歡迎隨時與我聯繫！</p>
+          <span class="section-tag">BESPOKE DINING</span>
+          <h2 class="section-title">預約一場風土盛宴</h2>
+          <p class="contact-sub">無論是私人餐酒晚宴、品牌聯名菜單，或是專屬包場活動，竭誠歡迎與主廚團隊聯繫。</p>
         </div>
         <div class="contact-card">
           <div class="contact-methods">
-            <a href="mailto:tobewu.dev@example.com" class="contact-pill">
+            <a href="mailto:chef.tobewu@example.com" class="contact-pill">
               <span class="contact-icon">📧</span>
-              <span>tobewu.dev@example.com</span>
+              <span>chef.tobewu@example.com</span>
             </a>
             <a href="https://github.com/tobewu980306-eng" target="_blank" rel="noopener noreferrer" class="contact-pill">
-              <span class="contact-icon">🐙</span>
-              <span>GitHub: tobewu980306-eng</span>
+              <span class="contact-icon">👨‍🍳</span>
+              <span>主廚作品集 (GitHub): tobewu980306-eng</span>
             </a>
           </div>
+          <p class="reservation-note">✨ 私廚服務採全預約制，建議於預計用餐日前 3 週預約以利為您提前尋訪當旬頂級食材。</p>
         </div>
       </div>
     </section>
@@ -295,23 +304,23 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-content">
-      <p>© 2026 Tobe Wu. 版權所有 · 託管於 GitHub Pages</p>
+      <p>© 2026 Chef Tobe Wu. 旬之味 · 產地至餐桌 · 託管於 GitHub Pages</p>
       <div class="footer-links">
-        <a href="#hero">返回頂端 ↑</a>
+        <a href="#hero">回到頂端 ↑</a>
       </div>
     </div>
   </footer>
 
   <!-- ======================================================== -->
-  <!-- Christmas Tiger AI Mascot & Interactive Chat Support      -->
+  <!-- Christmas Chef Tiger Mascot & AI Kitchen Assistant       -->
   <!-- ======================================================== -->
   <div class="tiger-widget" id="tigerWidget">
     <!-- Tiger Floating Launcher Button -->
-    <div class="tiger-launcher" id="tigerLauncher" title="點我與聖誕小虎聊聊！">
-      <div class="tiger-bubble">點我聊聊！🐯🎄</div>
+    <div class="tiger-launcher" id="tigerLauncher" title="點我與聖誕料理小虎聊聊！">
+      <div class="tiger-bubble">聞到香氣了嗎？聊聊料理！🐯🎄🍳</div>
       <div class="tiger-avatar-btn">
-        <!-- Cute Tiger SVG Wearing Santa Hat & Christmas Scarf -->
-        <svg class="tiger-svg" viewBox="0 0 100 100" width="62" height="62">
+        <!-- Cute Tiger SVG Wearing Santa Chef Hat & Red Scarf -->
+        <svg class="tiger-svg" viewBox="0 0 100 100" width="64" height="64">
           <!-- Tiger Ears -->
           <circle cx="28" cy="30" r="14" fill="#f59e0b" stroke="#78350f" stroke-width="2"/>
           <circle cx="28" cy="30" r="8" fill="#fef3c7"/>
@@ -324,7 +333,6 @@
           <ellipse cx="38" cy="62" rx="14" ry="11" fill="#fffbeb"/>
           <ellipse cx="62" cy="62" rx="14" ry="11" fill="#fffbeb"/>
 
-          <!-- Tiger Stripes -->
           <!-- Forehead "王" Style Stripes -->
           <path d="M42 34 L58 34" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"/>
           <path d="M45 39 L55 39" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"/>
@@ -350,17 +358,17 @@
           <circle cx="58" cy="58" r="1" fill="#78350f"/>
           <circle cx="60" cy="61" r="1" fill="#78350f"/>
 
-          <!-- Christmas Scarf & Bell -->
+          <!-- Christmas Scarf & Chef Golden Spoon Bell -->
           <path d="M28 75 Q50 85 72 75 L70 82 Q50 92 30 82 Z" fill="#dc2626" stroke="#991b1b" stroke-width="1.5"/>
           <circle cx="50" cy="85" r="5" fill="#facc15" stroke="#ca8a04" stroke-width="1.5"/>
-          <circle cx="50" cy="86" r="1.2" fill="#713f12"/>
+          <!-- Little Wooden Spoon in paw -->
+          <path d="M72 78 L86 64" stroke="#d97706" stroke-width="3" stroke-linecap="round"/>
+          <ellipse cx="88" cy="62" rx="4" ry="6" transform="rotate(-30 88 62)" fill="#f59e0b" stroke="#b45309" stroke-width="1.5"/>
 
-          <!-- Christmas Santa Hat -->
-          <path d="M30 28 Q48 10 74 18 Q62 2 38 12 Q30 20 30 28 Z" fill="#dc2626"/>
-          <!-- Hat Trim (Fluffy White) -->
-          <ellipse cx="48" cy="24" rx="22" ry="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
-          <!-- Pom-pom Ball -->
-          <circle cx="76" cy="18" r="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+          <!-- Christmas Chef Hat (White chef hat crown with red Santa band & pom-pom) -->
+          <path d="M32 24 Q32 6 48 8 Q56 4 64 10 Q70 16 68 24 Z" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+          <rect x="30" y="22" width="40" height="7" rx="3" fill="#dc2626"/>
+          <circle cx="68" cy="8" r="5" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
         </svg>
         <span class="launcher-online"></span>
       </div>
@@ -373,8 +381,8 @@
         <div class="chat-header-info">
           <div class="chat-avatar-mini">🐯</div>
           <div>
-            <h4>聖誕小虎客服 <span class="badge-tag">AI</span></h4>
-            <span class="chat-status"><span class="dot-online"></span> 線上為您解答 Tobe 的資訊</span>
+            <h4>聖誕主廚小虎 <span class="badge-tag">CHEF AI</span></h4>
+            <span class="chat-status"><span class="dot-online"></span> 在線為您介紹 Tobe 主廚的佳餚</span>
           </div>
         </div>
         <div class="chat-header-actions">
@@ -390,7 +398,7 @@
           <input type="text" id="gasUrlInput" placeholder="https://script.google.com/macros/s/.../exec">
           <button id="saveGasUrlBtn" class="btn-save">儲存</button>
         </div>
-        <small class="config-hint">如未設定，小虎將啟動內建知識庫離線回答模式。</small>
+        <small class="config-hint">若已設定，小虎將透過 OpenRouter (Claude Haiku 5.5) 即時為您解答料理秘辛！</small>
       </div>
 
       <!-- Chat Messages Body -->
@@ -398,24 +406,24 @@
         <div class="msg-item msg-assistant">
           <div class="msg-avatar">🐯</div>
           <div class="msg-bubble">
-            哈囉！我是<strong>聖誕小虎 🐯🎄</strong>！我是 Tobe Wu 的個人專案與履歷小助手。<br><br>
-            想了解 Tobe 的技術堆疊、精選專案、工作經歷或聯絡方式嗎？隨時點擊下方快捷問題或直接打字問我唷！
+            Bon Appétit！我是<strong>聖誕主廚小虎 🐯👨‍🍳🎄</strong>！我是 Tobe 主廚的廚藝助理。<br><br>
+            想了解 Tobe 主廚的招牌菜餚、產地嚴選食材、私廚預約流程，或是討教美味料理秘訣嗎？隨時點擊下方問題或打字問我唷！
           </div>
         </div>
       </div>
 
       <!-- Quick Suggestion Chips -->
       <div class="chat-suggestions" id="chatSuggestions">
-        <button class="chip" data-prompt="介紹一下 Tobe 的精選專案">🚀 精選專案</button>
-        <button class="chip" data-prompt="Tobe 擅長哪些技術堆疊？">💻 核心技術</button>
-        <button class="chip" data-prompt="Tobe 的工作經歷與背景？">📜 工作經歷</button>
-        <button class="chip" data-prompt="如何聯絡 Tobe？">📬 聯絡方式</button>
-        <button class="chip" data-prompt="小虎祝我聖誕快樂，並說一句工程師祝福！">🎅 聖誕祝福</button>
+        <button class="chip" data-prompt="請問 Tobe 主廚有哪些招牌料理？">🍽️ 招牌菜餚</button>
+        <button class="chip" data-prompt="主廚對於風土食材有什麼堅持？">🌿 風土嚴選食材</button>
+        <button class="chip" data-prompt="如何預約 Tobe 主廚的私廚晚宴？">🍷 私廚預約方式</button>
+        <button class="chip" data-prompt="聊聊 Tobe 主廚的料理經歷">👨‍🍳 主廚背景經歷</button>
+        <button class="chip" data-prompt="小虎可以推薦一道聖誕節日特別甜點嗎？">🎄 聖誕暖心甜點</button>
       </div>
 
       <!-- Chat Input Area -->
       <div class="chat-input-bar">
-        <input type="text" id="chatInput" placeholder="詢問小虎關於 Tobe 的任何事..." autocomplete="off">
+        <input type="text" id="chatInput" placeholder="詢問主廚小虎關於菜單、食材或料理哲學..." autocomplete="off">
         <button id="sendBtn" class="btn-send" aria-label="發送訊息">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="22" y1="2" x2="11" y2="13"></line>
