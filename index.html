@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tobe Wu | Full Stack & Cloud Developer</title>
+  <meta name="description" content="Personal portfolio and showcase of Tobe Wu - Full Stack Engineer, Cloud Developer & AI Enthusiast.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Background Glow Effects -->
+  <div class="glow-bg glow-1"></div>
+  <div class="glow-bg glow-2"></div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Tobe<span class="logo-accent">.Dev</span><span class="logo-bracket">/&gt;</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#about">關於我</a>
+        <a href="#skills">技術堆疊</a>
+        <a href="#projects">精選專案</a>
+        <a href="#experience">經歷</a>
+        <a href="#contact" class="btn-nav">聯絡我</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="切換選單" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="section hero-section">
+      <div class="container hero-content">
+        <div class="badge-status">
+          <span class="pulse-dot"></span>
+          <span>積極探索新技術與合作機會</span>
+        </div>
+        <h1 class="hero-title">
+          你好，我是 <span class="gradient-text">Tobe Wu</span>
+          <br>全端架構與雲端開發者
+        </h1>
+        <p class="hero-desc">
+          專注於建構高效能分散式系統、現代化 Web 應用程式與 AI 自動化解決方案。熱愛開源生態系與極致的使用者體驗。
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">探索精選專案</a>
+          <a href="https://github.com/tobewu980306-eng" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            GitHub 個人主頁
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">ABOUT ME</span>
+          <h2 class="section-title">關於我與技術理念</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>技術理念</h3>
+            <p>
+              我相信簡潔、具擴展性且可維護的程式碼是創造長久價值的基石。從前端細緻的互動動畫，到後端高併發的微服務架構，我持續追求以工程師思維解決實際業務難題。
+            </p>
+            <div class="stats-row">
+              <div class="stat-item">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">年程式開發經驗</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">20+</span>
+                <span class="stat-label">完成專案與服務</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">99.9%</span>
+                <span class="stat-label">系統可用性指標</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-card highlight">
+            <h3>核心專長領域</h3>
+            <ul class="feature-list">
+              <li>⚡ <strong>全端 Web 應用架構</strong>：現代 React / Next.js 與 Vue 生態</li>
+              <li>🚀 <strong>高效能後端 API</strong>：Node.js、Python FastAPI、Go 微服務</li>
+              <li>☁️ <strong>雲端部署與 CI/CD</strong>：Docker、Kubernetes、GitHub Actions</li>
+              <li>🤖 <strong>AI 智慧代理整合</strong>：LLM 應用、Agentic Workflow、客製化 MCP 工具</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">TECH STACK</span>
+          <h2 class="section-title">專業技術堆疊</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Frontend Development</h3>
+            <div class="tags">
+              <span class="tag">TypeScript</span>
+              <span class="tag">React</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">TailwindCSS</span>
+              <span class="tag">HTML5 / CSS3</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Backend & API</h3>
+            <div class="tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">Express</span>
+              <span class="tag">Python</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">RESTful & GraphQL</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Databases & Storage</h3>
+            <div class="tags">
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Redis</span>
+              <span class="tag">Prisma ORM</span>
+              <span class="tag">MongoDB</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>DevOps & Cloud</h3>
+            <div class="tags">
+              <span class="tag">Docker</span>
+              <span class="tag">GitHub Actions</span>
+              <span class="tag">AWS / GCP</span>
+              <span class="tag">Linux</span>
+              <span class="tag">Nginx</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">PORTFOLIO</span>
+          <h2 class="section-title">精選專案展示</h2>
+        </div>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-banner project-banner-1">
+              <span class="project-badge">AI & Automation</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">AgentFlow - 智慧自動化工作流引擎</h3>
+              <p class="project-desc">
+                以 LLM 與多代理人協作為核心的任務調度平台，支援外掛整合、即時串流通訊與自動化程式碼生成。
+              </p>
+              <div class="project-tags">
+                <span class="pill">TypeScript</span>
+                <span class="pill">Next.js</span>
+                <span class="pill">FastAPI</span>
+                <span class="pill">Redis</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/tobewu980306-eng" target="_blank" rel="noopener noreferrer" class="link-btn">原始碼 ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-banner project-banner-2">
+              <span class="project-badge">Cloud Infrastructure</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">CloudPulse - 分散式服務監控儀表板</h3>
+              <p class="project-desc">
+                針對微服務集群設計的高效即時指標監控中心，整合 Prometheus 指標查詢與自定義警報通知機器人。
+              </p>
+              <div class="project-tags">
+                <span class="pill">Go</span>
+                <span class="pill">React</span>
+                <span class="pill">Docker</span>
+                <span class="pill">WebSocket</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/tobewu980306-eng" target="_blank" rel="noopener noreferrer" class="link-btn">原始碼 ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-banner project-banner-3">
+              <span class="project-badge">Developer Tool</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">DevKit CLI - 開發者工程自動化套件</h3>
+              <p class="project-desc">
+                統一團隊開發規範與環境佈署的 CLI 工具，支援一鍵建立微服務骨架、資安金鑰掃描與 CI/CD 腳本注入。
+              </p>
+              <div class="project-tags">
+                <span class="pill">Node.js</span>
+                <span class="pill">GitHub API</span>
+                <span class="pill">Shell</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/tobewu980306-eng" target="_blank" rel="noopener noreferrer" class="link-btn">原始碼 ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">CAREER</span>
+          <h2 class="section-title">歷程與里程碑</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2024 - 現在</span>
+              <h3 class="timeline-title">資深全端工程師 · 創新技術研發</h3>
+              <p class="timeline-desc">負責核心產品架構升級、多雲佈署架構與 AI Agent 自動化流程導入，大幅提升團隊研發效率。</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2022 - 2024</span>
+              <h3 class="timeline-title">後端與雲端架構師 · 企業軟體解決方案</h3>
+              <p class="timeline-desc">主導微服務重構、設計高併發 REST API 與建置 CI/CD 自動化測試管道。</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2018 - 2022</span>
+              <h3 class="timeline-title">資訊工程學士學位</h3>
+              <p class="timeline-desc">主修電腦科學、演算法與軟體工程，熱衷參與開源社群專案與黑客松競賽。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container contact-container">
+        <div class="section-header">
+          <span class="section-tag">GET IN TOUCH</span>
+          <h2 class="section-title">讓我們一起打造卓越的產品</h2>
+          <p class="contact-sub">無論是技術交流、專案合作或新機會探詢，歡迎隨時與我聯繫！</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-methods">
+            <a href="mailto:tobewu.dev@example.com" class="contact-pill">
+              <span class="contact-icon">📧</span>
+              <span>tobewu.dev@example.com</span>
+            </a>
+            <a href="https://github.com/tobewu980306-eng" target="_blank" rel="noopener noreferrer" class="contact-pill">
+              <span class="contact-icon">🐙</span>
+              <span>GitHub: tobewu980306-eng</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2026 Tobe Wu. 版權所有 · 託管於 GitHub Pages</p>
+      <div class="footer-links">
+        <a href="#hero">返回頂端 ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================== -->
+  <!-- Christmas Tiger AI Mascot & Interactive Chat Support      -->
+  <!-- ======================================================== -->
+  <div class="tiger-widget" id="tigerWidget">
+    <!-- Tiger Floating Launcher Button -->
+    <div class="tiger-launcher" id="tigerLauncher" title="點我與聖誕小虎聊聊！">
+      <div class="tiger-bubble">點我聊聊！🐯🎄</div>
+      <div class="tiger-avatar-btn">
+        <!-- Cute Tiger SVG Wearing Santa Hat & Christmas Scarf -->
+        <svg class="tiger-svg" viewBox="0 0 100 100" width="62" height="62">
+          <!-- Tiger Ears -->
+          <circle cx="28" cy="30" r="14" fill="#f59e0b" stroke="#78350f" stroke-width="2"/>
+          <circle cx="28" cy="30" r="8" fill="#fef3c7"/>
+          <circle cx="72" cy="30" r="14" fill="#f59e0b" stroke="#78350f" stroke-width="2"/>
+          <circle cx="72" cy="30" r="8" fill="#fef3c7"/>
+
+          <!-- Tiger Head Body -->
+          <ellipse cx="50" cy="54" rx="34" ry="30" fill="#f59e0b" stroke="#78350f" stroke-width="2"/>
+          <!-- Cheeks / Snout White Area -->
+          <ellipse cx="38" cy="62" rx="14" ry="11" fill="#fffbeb"/>
+          <ellipse cx="62" cy="62" rx="14" ry="11" fill="#fffbeb"/>
+
+          <!-- Tiger Stripes -->
+          <!-- Forehead "王" Style Stripes -->
+          <path d="M42 34 L58 34" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M45 39 L55 39" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M50 31 L50 41" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- Cheek Stripes -->
+          <path d="M20 50 L27 52" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M19 56 L26 57" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M80 50 L73 52" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M81 56 L74 57" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"/>
+
+          <!-- Cute Eyes with Sparkle -->
+          <circle cx="36" cy="50" r="5" fill="#1e1b4b"/>
+          <circle cx="34.5" cy="48.5" r="1.8" fill="#ffffff"/>
+          <circle cx="64" cy="50" r="5" fill="#1e1b4b"/>
+          <circle cx="62.5" cy="48.5" r="1.8" fill="#ffffff"/>
+
+          <!-- Pink Nose & Cute Mouth -->
+          <polygon points="50,57 46,53 54,53" fill="#f43f5e"/>
+          <path d="M46 60 Q50 63 54 60" stroke="#78350f" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <!-- Whisker Dots -->
+          <circle cx="42" cy="58" r="1" fill="#78350f"/>
+          <circle cx="40" cy="61" r="1" fill="#78350f"/>
+          <circle cx="58" cy="58" r="1" fill="#78350f"/>
+          <circle cx="60" cy="61" r="1" fill="#78350f"/>
+
+          <!-- Christmas Scarf & Bell -->
+          <path d="M28 75 Q50 85 72 75 L70 82 Q50 92 30 82 Z" fill="#dc2626" stroke="#991b1b" stroke-width="1.5"/>
+          <circle cx="50" cy="85" r="5" fill="#facc15" stroke="#ca8a04" stroke-width="1.5"/>
+          <circle cx="50" cy="86" r="1.2" fill="#713f12"/>
+
+          <!-- Christmas Santa Hat -->
+          <path d="M30 28 Q48 10 74 18 Q62 2 38 12 Q30 20 30 28 Z" fill="#dc2626"/>
+          <!-- Hat Trim (Fluffy White) -->
+          <ellipse cx="48" cy="24" rx="22" ry="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+          <!-- Pom-pom Ball -->
+          <circle cx="76" cy="18" r="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+        </svg>
+        <span class="launcher-online"></span>
+      </div>
+    </div>
+
+    <!-- Tiger Chat Window Modal -->
+    <div class="tiger-chat-window" id="tigerChatWindow">
+      <!-- Chat Header -->
+      <div class="chat-header">
+        <div class="chat-header-info">
+          <div class="chat-avatar-mini">🐯</div>
+          <div>
+            <h4>聖誕小虎客服 <span class="badge-tag">AI</span></h4>
+            <span class="chat-status"><span class="dot-online"></span> 線上為您解答 Tobe 的資訊</span>
+          </div>
+        </div>
+        <div class="chat-header-actions">
+          <button id="toggleConfigBtn" title="設定 GAS Web App 網址" class="icon-btn">⚙️</button>
+          <button id="closeChatBtn" title="縮小" class="icon-btn">✕</button>
+        </div>
+      </div>
+
+      <!-- GAS Config Drawer (Collapsible) -->
+      <div class="chat-config-drawer" id="configDrawer">
+        <label for="gasUrlInput">Google Apps Script Web App 網址：</label>
+        <div class="config-input-group">
+          <input type="text" id="gasUrlInput" placeholder="https://script.google.com/macros/s/.../exec">
+          <button id="saveGasUrlBtn" class="btn-save">儲存</button>
+        </div>
+        <small class="config-hint">如未設定，小虎將啟動內建知識庫離線回答模式。</small>
+      </div>
+
+      <!-- Chat Messages Body -->
+      <div class="chat-messages" id="chatMessages">
+        <div class="msg-item msg-assistant">
+          <div class="msg-avatar">🐯</div>
+          <div class="msg-bubble">
+            哈囉！我是<strong>聖誕小虎 🐯🎄</strong>！我是 Tobe Wu 的個人專案與履歷小助手。<br><br>
+            想了解 Tobe 的技術堆疊、精選專案、工作經歷或聯絡方式嗎？隨時點擊下方快捷問題或直接打字問我唷！
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Suggestion Chips -->
+      <div class="chat-suggestions" id="chatSuggestions">
+        <button class="chip" data-prompt="介紹一下 Tobe 的精選專案">🚀 精選專案</button>
+        <button class="chip" data-prompt="Tobe 擅長哪些技術堆疊？">💻 核心技術</button>
+        <button class="chip" data-prompt="Tobe 的工作經歷與背景？">📜 工作經歷</button>
+        <button class="chip" data-prompt="如何聯絡 Tobe？">📬 聯絡方式</button>
+        <button class="chip" data-prompt="小虎祝我聖誕快樂，並說一句工程師祝福！">🎅 聖誕祝福</button>
+      </div>
+
+      <!-- Chat Input Area -->
+      <div class="chat-input-bar">
+        <input type="text" id="chatInput" placeholder="詢問小虎關於 Tobe 的任何事..." autocomplete="off">
+        <button id="sendBtn" class="btn-send" aria-label="發送訊息">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
