@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollY = window.pageYOffset;
 
     sections.forEach(section => {
-      const sectionTop = section.offsetTop - 120;
+      const sectionTop = section.offsetTop - 130;
       const sectionHeight = section.offsetHeight;
       if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
         current = section.getAttribute('id');
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Smooth Scroll Reveal Animation
   const observerOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    rootMargin: '0px 0px -40px 0px'
   };
 
   const observer = new IntersectionObserver((entries) => {
@@ -57,16 +57,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, observerOptions);
 
-  document.querySelectorAll('.about-card, .skill-group, .project-card, .timeline-item').forEach(el => {
+  document.querySelectorAll('.about-card, .ingredient-card, .menu-card, .timeline-item').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(24px)';
-    el.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+    el.style.transition = 'all 0.65s cubic-bezier(0.16, 1, 0.3, 1)';
     observer.observe(el);
   });
 
   // ==========================================================
-  // 2. Christmas Tiger AI Mascot & Interactive Chat Logic
-  // ==========================================
+  // 2. Christmas Chef Tiger AI Mascot & Interactive Chat Logic
+  // ==========================================================
   const tigerLauncher = document.getElementById('tigerLauncher');
   const tigerChatWindow = document.getElementById('tigerChatWindow');
   const closeChatBtn = document.getElementById('closeChatBtn');
@@ -79,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const sendBtn = document.getElementById('sendBtn');
   const chatSuggestions = document.getElementById('chatSuggestions');
 
-  // Default GAS Web App URL (Can be set here or via UI)
   let GAS_WEBAPP_URL = localStorage.getItem('gas_webapp_url') || '';
   if (gasUrlInput) {
     gasUrlInput.value = GAS_WEBAPP_URL;
@@ -107,10 +106,9 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('gas_webapp_url', val);
     GAS_WEBAPP_URL = val;
     configDrawer.classList.remove('active');
-    appendAssistantMessage(`✅ 已儲存 Google Apps Script 網址！現在小虎會直接透過您的雲端後端呼叫 OpenRouter (Claude Haiku 5.5) 囉！🐯🎄`);
+    appendAssistantMessage(`✅ 已儲存 Google Apps Script 網址！現在小虎主廚會直接連線至雲端 OpenRouter (Claude Haiku 5.5) 為您解答米其林級料理秘辛！🐯👨‍🍳🎄`);
   });
 
-  // Conversation history array with reasoning support
   const conversationHistory = [];
 
   // Handle Send Message
@@ -118,17 +116,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const userText = text || chatInput.value.trim();
     if (!userText) return;
 
-    // Clear input
     chatInput.value = '';
-
-    // Render User Message
     appendUserMessage(userText);
     conversationHistory.push({ role: 'user', content: userText });
 
-    // Show Typing Indicator
     const typingElem = showTypingIndicator();
 
-    // Call GAS Web App or Fallback
     if (GAS_WEBAPP_URL && GAS_WEBAPP_URL.startsWith('http')) {
       fetch(GAS_WEBAPP_URL, {
         method: 'POST',
@@ -150,16 +143,15 @@ document.addEventListener('DOMContentLoaded', () => {
             reasoning_details: reasoningDetails
           });
         } else {
-          appendAssistantMessage(`🐯 哎呀，小虎呼叫後端時遇到了點小狀況：${data.error || '未知錯誤'}。請確認 GAS 專案設定與權限！`);
+          appendAssistantMessage(`🐯 哎呀，廚房連線有點小狀況：${data.error || '未知錯誤'}。小虎正在切換至主廚離線知識庫！`);
+          fallbackLocalReply(userText);
         }
       })
       .catch(err => {
         removeTypingIndicator(typingElem);
-        // Fallback to local assistant if network / CORS error
         fallbackLocalReply(userText);
       });
     } else {
-      // Local Smart Fallback Reply
       setTimeout(() => {
         removeTypingIndicator(typingElem);
         fallbackLocalReply(userText);
@@ -167,45 +159,51 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Local Smart Offline Reply Engine (Handles questions when GAS is pending deployment)
+  // Local Chef Fallback Engine
   function fallbackLocalReply(prompt) {
     const p = prompt.toLowerCase();
     let reply = '';
 
-    if (p.includes('專案') || p.includes('作品') || p.includes('project')) {
-      reply = `🐯 Tobe 的三大精選代表專案如下唷：<br><br>
-1. <strong>AgentFlow</strong>：以 LLM 與多代理人協作為核心的自動化工作流引擎（TypeScript / FastAPI / Redis）。<br>
-2. <strong>CloudPulse</strong>：微服務即時指標監控中心，整合 Prometheus 與警報機器人（Go / React / Docker）。<br>
-3. <strong>DevKit CLI</strong>：統一團隊標準的一鍵微服務腳手架與 CI/CD 注入套件（Node.js / Shell）。<br><br>
-您可以滑動到上方的「精選專案」區塊查看原始碼連結喔！`;
-    } else if (p.includes('技術') || p.includes('stack') || p.includes('語言') || p.includes('技能')) {
-      reply = `🐯 Tobe 的核心技術棧非常全方位：<br><br>
-- <strong>前端</strong>：TypeScript, React, Next.js, TailwindCSS<br>
-- <strong>後端</strong>：Node.js, Express, Python (FastAPI), Go 微服務<br>
-- <strong>資料庫</strong>：PostgreSQL, MySQL, Redis, MongoDB<br>
-- <strong>DevOps & 雲端</strong>：Docker, Kubernetes, GitHub Actions, AWS / GCP<br>
-- <strong>AI 應用</strong>：LLM Agent 工作流、OpenRouter API 整合！`;
-    } else if (p.includes('經歷') || p.includes('背景') || p.includes('學歷') || p.includes('experience')) {
-      reply = `🐯 Tobe 目前是<strong>資深全端工程師</strong>（2024 - 現在），專注於核心架構升級與 AI Agent 流程落地！<br><br>
-過去曾擔任<strong>後端與雲端架構師</strong>（2022 - 2024），畢業於<strong>資訊工程學系</strong>（2018 - 2022），具備超過 5 年的紮實工程研發經驗！`;
-    } else if (p.includes('聯絡') || p.includes('email') || p.includes('信箱') || p.includes('contact')) {
-      reply = `🐯 歡迎隨時與 Tobe 交流與合作！<br><br>
-📧 <strong>Email</strong>：<a href="mailto:tobewu.dev@example.com" style="color:#f59e0b;">tobewu.dev@example.com</a><br>
-🐙 <strong>GitHub</strong>：<a href="https://github.com/tobewu980306-eng" target="_blank" style="color:#f59e0b;">github.com/tobewu980306-eng</a>`;
-    } else if (p.includes('聖誕') || p.includes('祝') || p.includes('christmas')) {
-      reply = `🎅🎄 祝你聖誕快樂！小虎為你送上工程師專屬聖誕祝福：<br><br>
-<em>「願你的程式碼永遠一次通過編譯，伺服器永遠 99.999% 高可用，Bug 像雪花般在陽光下迅速融化！」</em> 🐯✨❄️`;
+    if (p.includes('菜') || p.includes('menu') || p.includes('招牌') || p.includes('料理') || p.includes('吃什麼')) {
+      reply = `🐯👨‍🍳 Tobe 主廚今冬的四大旬味代表作超級厲害喔：<br><br>
+1. 🦆 <strong>熟成櫻桃鴨胸佐黑蒜波特酒醬</strong>：花蓮放牧鴨胸經 14 日風乾熟成，外皮炭火焦脆、肉質如紅寶石般透嫩。<br>
+2. 🐟 <strong>炭炙野生紅甘佐金桔發酵胡蘿蔔泥</strong>：稻草瞬火微炙，搭佐客家金桔乳酸發酵泥與爆漿手指檸檬！<br>
+3. 🍄 <strong>黑松露野菇澄清湯佐手作牛肝菌雲吞</strong>：雙重蛋白慢熬 8 小時琥珀澄清湯，純淨鮮美。<br>
+4. 🍫 <strong>紅玉紅茶煙燻巧克力慕斯佐香草油</strong>：日月潭紅玉茶香與 72% 法芙娜巧克力的成熟苦甜滋味。<br><br>
+您可以在首頁「旬味菜單」細細品味每一道菜的風土故事！`;
+    } else if (p.includes('食材') || p.includes('理念') || p.includes('風土') || p.includes('原料')) {
+      reply = `🌿 Tobe 主廚秉持<strong>「產地到餐桌」</strong>的嚴謹標準：<br><br>
+- 🍄 <strong>山林採集</strong>：南投野生牛肝菌、手採黑松露，散發原始深邃的泥土堅果香。<br>
+- 🐟 <strong>永續海鮮</strong>：宜蘭野生紅甘友善一本釣捕撈，嚴格執行 7 天冰溫熟成。<br>
+- 🧄 <strong>天然發酵</strong>：雲林 60 天低溫發酵黑蒜，天然黑蒜油回甘如蜜。<br>
+- 🦆 <strong>友善放牧</strong>：花蓮湧泉放牧櫻桃鴨，以龍眼木炭火賦予獨特煙燻香氣！`;
+    } else if (p.includes('預約') || p.includes('訂位') || p.includes('私廚') || p.includes('reservation') || p.includes('費用') || p.includes('聯絡')) {
+      reply = `🍷 Tobe 主廚的「旬・Tobe Atelier」私廚採<strong>全預約制</strong>：<br><br>
+📧 <strong>預約信箱</strong>：<a href="mailto:chef.tobewu@example.com" style="color:#f59e0b;">chef.tobewu@example.com</a><br>
+🐙 <strong>主廚作品集</strong>：<a href="https://github.com/tobewu980306-eng" target="_blank" style="color:#f59e0b;">github.com/tobewu980306-eng</a><br><br>
+💡 <em>貼心叮嚀：為了讓主廚親赴產地為您採集最頂級的當旬食材，建議提前 3 週確認用餐人數與客製菜單需求喔！</em>`;
+    } else if (p.includes('經歷') || p.includes('背景') || p.includes('師傅') || p.includes('誰') || p.includes('journey')) {
+      reply = `👨‍🍳 Tobe 主廚擁有超過 10 年當代法義料理歷練：<br><br>
+- 🌟 <strong>2024 - 至今</strong>：創立「旬・Tobe Atelier」私廚工作室，擔任高規格餐酒會主廚與餐飲研發顧問。<br>
+- 🥇 <strong>2021 - 2024</strong>：米其林推薦當代歐陸餐廳研發副主廚 (Sous Chef)，專精發酵與熟成工藝。<br>
+- 🎓 <strong>2017 - 2021</strong>：取得國際廚藝學院高級文憑，並於歐陸三星名廚餐廳深入研修古典法式醬汁！`;
+    } else if (p.includes('聖誕') || p.includes('甜點') || p.includes('祝') || p.includes('christmas')) {
+      reply = `🎅🎄 叮叮噹！小虎主廚祝你聖誕快樂！為你端出熱騰騰的節慶祝福：<br><br>
+<em>「願你的生活如 72% 煙燻黑巧克力般濃醇豐富，如肉桂海鹽般甜鹹平衡，每天都有滿滿的風土美味陪伴！」</em> 🐯🍰✨`;
     } else {
-      reply = `🐯 收到你的問題了！我是 Tobe 的個人網站小助手。<br><br>
-💡 <em>貼心提醒：若您已在 Google Apps Script 部署好 OpenRouter 轉發程式，請點擊右上角「⚙️」填入 GAS 網址，小虎就能以 Claude Haiku 5.5 大腦進行即時深度對話囉！</em><br><br>
-想先了解 Tobe 的專案、技術技能或工作經歷嗎？隨時點擊下方按鈕試試看！`;
+      reply = `🐯👨‍🍳 您好！我是聖誕小虎主廚。<br><br>
+想品嚐風土美味嗎？您可以問我關於：<br>
+• <strong>當季招牌菜單</strong> 🍽️<br>
+• <strong>風土與嚴選食材</strong> 🌿<br>
+• <strong>私廚預約方式</strong> 🍷<br>
+• <strong>Tobe 主廚廚藝故事</strong> 👨‍🍳<br><br>
+💡 <em>若您在 GAS 設定了 OpenRouter API，點擊右上角「⚙️」填入網址，小虎就能以 Claude Haiku 5.5 大腦陪您深度聊料理囉！</em>`;
     }
 
     appendAssistantMessage(reply);
     conversationHistory.push({ role: 'assistant', content: reply.replace(/<[^>]*>/g, '') });
   }
 
-  // Render Helpers
   function appendUserMessage(text) {
     const div = document.createElement('div');
     div.className = 'msg-item msg-user';
@@ -262,13 +260,11 @@ document.addEventListener('DOMContentLoaded', () => {
     return div.innerHTML;
   }
 
-  // Event Listeners for Chat
   sendBtn.addEventListener('click', () => handleSendMessage());
   chatInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') handleSendMessage();
   });
 
-  // Suggestion Chips Click
   chatSuggestions.querySelectorAll('.chip').forEach(chip => {
     chip.addEventListener('click', () => {
       const prompt = chip.getAttribute('data-prompt');
